@@ -45,7 +45,7 @@
             
             <div class="col-2">
             <form action="add_cart.php?&id='.$row['prod_id'].'" method="POST">
-                <p>'.$row["prod_category"].' / ID: '.$row["prod_id"].'</p>
+                <p>'.$row["prod_category"].' / ID: '.$row["prod_id"].'</p>  
                 <h1>'.$row["prod_name"].'</h1>
                 <h4>'.$row["prod_price"].'$</h4>
                 <h4>Remaining <strong>'.$row["prod_quantity"].'</strong> product in store.</h4>

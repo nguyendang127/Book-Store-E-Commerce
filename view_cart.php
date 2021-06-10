@@ -16,11 +16,11 @@
         session_start();
         require "navigation_bar.php";
 	 	
-             if(!isset($_SESSION['add_cart']) | $_SESSION['add_cart'] == []){
+             if(!isset($_SESSION['add_cart']) || $_SESSION['add_cart'] == []){
                 echo "<script>alert('Your cart is empty! ');location.href='homepage.php'</script>";
             }            
 
-             $cart = (isset($_SESSION['add_cart']))? $_SESSION['add_cart'] : [];    
+             $cart = (isset($_SESSION['add_cart']))? $_SESSION['add_cart'] : [];   
             // echo "<pre>";
             // print_r($cart); 
 	   ?>

@@ -46,7 +46,7 @@
                 <label class="col-md-4 control-label" for="product_categorie">PRODUCT CATEGORY</label>
                 <div class="col-md-4">
                     <select id="product_categorie" name="product_categorie" class="form-control">
-                        <option value="">Tap to select product category</option>
+                        <option value="">Click to select product category</option>
                         <option value="1">Novel</option>
                         <option value="2">Manga</option>
                         <option value="3">Self-help</option>

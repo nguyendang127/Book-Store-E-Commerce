@@ -44,7 +44,7 @@
                                         while($row = $rs->fetch_assoc()) {
                                             echo '
                                 <tr>
-                                    <td class="hidden-xs">'.$row['prod_id'].'</td>
+                                    <td class="hidden-xs" style = "text-align: center;">'.$row['prod_id'].'</td>
                                     <td>'.$row['cate_name'].'</td>
                                     <td>'.$row['prod_name'].'</td>
                                     <td>'.$row['prod_content'].'</td>

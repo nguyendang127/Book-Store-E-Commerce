@@ -19,6 +19,7 @@ if (isset($_POST['login'])) {
     switch($num){ // kiểm tra tài khoản có tồn tại không
         case "1":
             $_SESSION["account_name"] = $username;
+            $_SESSION['loggedin'] = true;
             header("location: homepage.php");
             break;
         case "0": // nếu không tồn tại thì chuyển sang loại tài khoản admin 

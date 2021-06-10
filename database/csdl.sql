@@ -1,5 +1,4 @@
 create database bookstore charset=utf8;
-drop database bookstore;
 use bookstore;
 
 
