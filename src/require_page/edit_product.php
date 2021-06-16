@@ -44,7 +44,7 @@
                                         while($row = $rs->fetch_assoc()) {
                                             echo '
                                 <tr>
-                                    <td class="hidden-xs" style = "text-align: center;">'.$row['prod_id'].'</td>
+                                    <td class="hidden-xs">'.$row['prod_id'].'</td>
                                     <td>'.$row['cate_name'].'</td>
                                     <td>'.$row['prod_name'].'</td>
                                     <td>'.$row['prod_content'].'</td>
@@ -82,6 +82,7 @@
                         $content = $_POST['content'];
                         $price = $_POST['price'];
                         $quantity = $_POST['quantity'];
+                        
 
                         if (($_FILES['up-file']['error'] == 0) &&
                         ($_FILES["up-file"]["type"] == "image/jpeg")) { 
@@ -110,7 +111,7 @@
                         echo "<script>alert('Your change is saved!');</script>";
                         break;
                     case $price:
-                        $sql = "update product set prod_price = $price where prod_id = $id";
+                        $sql = "update product set prod_price = '$price' where prod_id = $id";
                         $rs = $con->query($sql);
                         echo "<script>alert('Your change is saved!');</script>";
                         break;
@@ -120,7 +121,7 @@
                         echo "<script>alert('Your change is saved!');</script>";
                         break;
                     case $quantity:
-                        $sql = "update detail set prod_quantity = $quantity where prod_id = $id";
+                        $sql = "update detail set prod_quantity = '$quantity' where prod_id = $id";
                         $rs = $con->query($sql);    
                         echo "<script>alert('Your change is saved!');</script>";
                         break;

@@ -29,6 +29,7 @@
                                     <th>Email</th>
                                     <th>Phone</th>
                                     <th>Time order</th>
+                                    <th>Point</th>
                                     <th>Details</th>
                                     <th>Delete</th>
                                 </tr>
@@ -47,6 +48,7 @@
                                     <td>'.$row['order_email'].'</td>
                                     <td>'.$row['order_phone'].'</td>
                                     <td>'.$row['order_time'].'</td>
+                                    <td>'.$row['order_savepoint'].'</td>
                                     <td><a href="order_details.php?id='.$row['order_id'].'">view</a></td>
                                     <td> 
                                         <a href="delete_order.php?&id='.$row['order_id'].'" class="btn btn-danger"><em class="fa fa-trash"></em></a>

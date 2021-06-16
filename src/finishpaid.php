@@ -4,6 +4,7 @@ require_once "connect.php";
         if ($con->connect_error) {
             die('Cannot Connection!');
         }
+        $savepoint = $_SESSION['savepoint'];
         
         if (isset($_POST['submit'])) { // kiểm tra nếu người dùng đã submit thì đưa thông tin order lên db để admin quản lý
 
@@ -13,7 +14,7 @@ require_once "connect.php";
             $city = $_POST["city"];
             $phone = $_POST["phone"];
 
-            $s = "insert into order_prod (order_prod_name, order_address, order_city, order_email, order_phone, order_time) values ('$fullname', '$address', '$city','$email', '$phone', now())";
+            $s = "insert into order_prod (order_prod_name, order_address, order_city, order_email, order_phone, order_time, order_savepoint) values ('$fullname', '$address', '$city','$email', '$phone', now(), '$savepoint')";
             
 
             

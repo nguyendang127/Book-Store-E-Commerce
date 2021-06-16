@@ -33,7 +33,8 @@ create table product (
     order_city varchar(255),
     order_email varchar(255),
     order_phone varchar(255),
-    order_time datetime
+    order_time datetime,
+    order_savepoint float
  );
 
 
